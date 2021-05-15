@@ -1,5 +1,11 @@
 # kimbug-HTML-practice
 
+## 사용한 스택: HTML, CSS
+
+## 작업기간: 210515 - 
+
+## 작업내용 스크린샷
+
 ### 1. Ad_Banner
 <img src="https://i.esdrop.com/d/KwrGH1p1Zl/purQ91ws0v.png"  width="40%" height="45%">
 
