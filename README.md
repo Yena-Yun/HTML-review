@@ -1,5 +1,7 @@
 # kimbug-HTML-practice
 
+강의: '김버그의 HTML&CSS는 재밌다' (구름에듀)
+
 사용기술: HTML, CSS
 
 작업기간: 210515 - 
