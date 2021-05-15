@@ -1,2 +1,2 @@
 # kimbug-HTML-practice
-<img src="images/ad_banners.png", width="100">
+<img src="Capri_Island.jpeg" width="700">
