@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Product Card</title>
+	<link rel="stylesheet" href="style.css">
+	<!-- font awesome 사용 시 import 해와야 하는 부분 -->
+	<script src="https://kit.fontawesome.com/2a95288bca.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<div class="product-card">
+
+		<!-- 이런 div는 별 의미는 없고 그냥 css 스타일을 주기 위해 class만 부여하는 요소 -->
+		<div class="product-card-image">
+			<img src="https://user-images.githubusercontent.com/19285811/69318246-becd7980-0c77-11ea-8324-6c43e2de8cf2.png"
+				alt="">
+		</div>
+
+		<!-- 한 덩어리로 묶여 있는 건 div로 감싸준다 + css 스타일 부여하기 위함 -->
+		<div class="product-card-title">
+			<h1>
+				혼자가 혼자에게
+			</h1>
+			<!-- strong: 이 책이 오늘의 책으로 선정됐다는 것을 강조 -->
+			<!-- 버튼 기능이 아니므로 button을 주면 안 됨 -->
+			<strong aria-label="오늘의 책 선정">
+				오늘의 책
+			</strong>
+		</div>
+
+		<!-- strong: 이 사람이 저자라는 점을 강조 -->
+		<!-- css의 'order'를 이용해 제목과 저자의 자리를 바꿔줄 수 있음 -->
+		<strong aria-label="저자 이병률" class="product-card-author">
+			이병률
+		</strong>
+
+		<!-- strong: 별점이 9.4라는 것을 강조 -->
+		<strong aria-label="평점 9.4" class="product-card-review">
+			<!-- 이미 9.4라는 숫자로 정보를 전달하고 있으므로 
+						별 부분은 브라우저에게 그다지 중요하지 않음 -->
+			<!-- => span으로 감싸고 aria-hidden 속성을 준다(스크린리더가 읽지 않도록) -->
+			<!-- css로 별 그리려면 매우 힘듦 (이런 부분은 그냥 html에서 font awesome 등으로 처리) -->
+			<span aria-hidden="true">
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star-half"></i>
+			</span>
+			9.4
+		</strong>
+
+	</div>
+</body>
+
+</html>

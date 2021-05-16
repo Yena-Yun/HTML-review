@@ -1,0 +1,137 @@
+@import url(https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+
+* {
+	margin: 0;
+	box-sizing: border-box;
+	letter-spacing: -0.03em;
+}
+
+html {
+	font-family: "SpoqaHanSans";
+	font-size: 16px;
+	line-height: 1.5;
+	color: #1f2d3d;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	/* 화면 꽉 채우기 */
+	width: 100%;
+	height: 100vh;
+	
+	margin: 0 auto;
+	background-color: #1f2d3d;
+}
+
+body::after {
+	content: "kimbug©";
+	/* html에 없는 부분 -> div 속성을 줌 */
+	display: block; 
+	margin-top: 50px;
+	color: #fff;
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.product-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	/* 위 좌우 아래 (위를 아래보다 조금 더 많이 줌 */
+	padding: 32px 48px 24px;
+
+	border-radius: 4px;
+	background-color: #fff;
+}
+
+.product-card:hover .product-card-image::after {
+	box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.4);
+}
+
+.product-card-image {
+	/* order: 요소의 '시각적' 순서 */
+	order: 1;
+	position: relative;
+}
+
+.product-card-image img {
+	position: relative;
+	z-index: 1;
+	border-radius: 5px;
+}
+
+.product-card-image::after {
+	content: "";
+	position: absolute;
+	z-index: 0;
+	left: 50%;
+	bottom: 8px;
+	width: 75%;
+	height: 0;
+	padding-bottom: 75%;
+	transform: translateX(-50%);
+	background-color: #fff;
+	transition: box-shadow 250ms ease-in;
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.65);
+}
+
+.product-card-title {
+	order: 3;
+	display: flex;
+
+	/* wrap인 경우 화면이 좁아지면 요소가 아래로 내려감 (nowrap: 차라리 잘리고 말지 = 타협 없음) */
+	flex-wrap: wrap;
+
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 16px;
+}
+
+/* html의 h1은 글자크기보다 의미상으로 부여하는 측면이 강함 */
+/* => css에서 적절하게 글자크기 조절해줄 필요 있음 */
+.product-card-title h1 {
+	font-size: 18px;
+	line-height: 1.3333333333;
+	color: #212529;
+}
+
+/* 오늘의 책 부분 */
+.product-card-title strong {
+	padding: 0 5px 0 4px; /* 왜 오른쪽을 왼쪽보다 더 줬지? */
+	border-radius: 4px;
+	margin-left: 8px;
+	font-size: 13px;
+	line-height: 20px; /* display: flex, align-items:center 없이 세로가운데로 살짝 맞출 때 줄간격 사용*/
+	color: #fff;
+	background-color: #0257c7;
+}
+
+.product-card-author {
+	order: 2; /* 이미지 다음에 두 번째로 오도록 (순서 조정) */
+	margin: 8px 0;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 16px; /* 위의 이미지와 살짝 더 붙음 (줄간격 용도가 다양한듯.. 위아래 간격 조정할 일 있으면 margin에 덧붙여 써보기) */
+	color: #80868e;
+}
+
+.product-card-review {
+	order: 4;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: -4px; /* 살짝 왼쪽으로 더 당기기 */
+	font-size: 14px;
+}
+
+/* font awesome 부분은 fas 클래스로 스타일 지정 가능 */
+.fas {
+	color: #ffcf14;
+	margin-right: -1px; /* 별 사이 간격을 살짝 줄임 */
+}
