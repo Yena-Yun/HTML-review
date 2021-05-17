@@ -22,7 +22,7 @@
 <img src="https://i.esdrop.com/d/KwrGH1p1Zl/ODa0P5K6Uv.png" width="40%" height="45%">
 
 ## 5. Breadcrumb_and_Pagination
-<img src="https://i.esdrop.com/d/KwrGH1p1Zl/72hrziFhNL.png" width="40%" height="45%">
+<img src="https://i.esdrop.com/d/KwrGH1p1Zl/72hrziFhNL.png" width="30%" height="25%">
 
 ## 6. Product_Card
 <img src="https://i.esdrop.com/d/KwrGH1p1Zl/iWLav8i45W.png" width="40%" height="45%">
