@@ -25,11 +25,11 @@
 <img src="https://i.esdrop.com/d/KwrGH1p1Zl/72hrziFhNL.png" width="30%" height="25%">
 
 ## 6. Product_Card
-<img src="https://i.esdrop.com/d/KwrGH1p1Zl/iWLav8i45W.png" width="40%" height="45%">
+<img src="https://i.esdrop.com/d/KwrGH1p1Zl/iWLav8i45W.png" width="30%" height="35%">
 
 ## 7. Instagram_User_Profile
 <img src="https://i.esdrop.com/d/KwrGH1p1Zl/5ApnoPYCsm.png" width="40%" height="45%">
 
 ## 8. Receipt
-<img src="https://i.esdrop.com/d/KwrGH1p1Zl/CuJWbJTU6D.png" width="40%" height="45%">
+<img src="https://i.esdrop.com/d/KwrGH1p1Zl/CuJWbJTU6D.png" width="30%" height="35%">
 
