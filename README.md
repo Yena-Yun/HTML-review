@@ -16,13 +16,13 @@
 <img src="https://i.esdrop.com/d/KwrGH1p1Zl/XbFEIqprDi.png" width="40%" height="45%">
 
 ## 3. Feature_Box
-<img src="https://i.esdrop.com/d/KwrGH1p1Zl/u5SmkT6FGK.png" width="30%" height="35%">
+<img src="https://i.esdrop.com/d/KwrGH1p1Zl/u5SmkT6FGK.png" width="25%" height="30%">
 
 ## 4. Logo_in_Header
 <img src="https://i.esdrop.com/d/KwrGH1p1Zl/ODa0P5K6Uv.png" width="35%" height="20%">
 
 ## 5. Breadcrumb_and_Pagination
-<img src="https://i.esdrop.com/d/KwrGH1p1Zl/72hrziFhNL.png" width="30%" height="25%">
+<img src="https://i.esdrop.com/d/KwrGH1p1Zl/72hrziFhNL.png" width="30%" height="20%">
 
 ## 6. Product_Card
 <img src="https://i.esdrop.com/d/KwrGH1p1Zl/iWLav8i45W.png" width="30%" height="35%">
