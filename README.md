@@ -19,7 +19,7 @@
 <img src="https://i.esdrop.com/d/KwrGH1p1Zl/u5SmkT6FGK.png" width="25%" height="30%">
 
 ## 4. Logo_in_Header
-<img src="https://i.esdrop.com/d/KwrGH1p1Zl/ODa0P5K6Uv.png" width="35%" height="20%">
+<img src="https://i.esdrop.com/d/KwrGH1p1Zl/ODa0P5K6Uv.png" width="35%" height="auto">
 
 ## 5. Breadcrumb_and_Pagination
 <img src="https://i.esdrop.com/d/KwrGH1p1Zl/72hrziFhNL.png" width="30%" height="20%">
