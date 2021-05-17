@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Receipt</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<h1>
+		<a href="#">
+			Bill sharing request
+		</a>
+		<span>from Kimbug</span>
+	</h1>
+
+	<div class="receipt">
+		<!-- 두번째 제목 => h2 -->
+		<h2>
+			McDonald's
+		</h2>
+
+		<!-- 영수증이므로 바코드 부분이 중요 -> strong으로 강조 -->
+		<strong class="barcode">
+			<img src="./assets/barcode.svg" alt="barcode">
+		</strong>
+
+		<!-- 스크린리더 사용자들을 위해 '영수증이 발행된 날짜'라는 것을 알려줌 -->
+		<!-- 날짜보다 의미적으로 더 중요한 제목과 바코드를 위로 올림 => css에서 자리 바꿔줌 -->
+		<span aria-label="issued on June 14, 20xx">
+			24.06.20xx
+		</span>
+
+		<div class="bill-record">
+			<!-- dl 안의 dt, dd는 반드시 각각 div로 한번 더 묶어주기 - css 스타일 부여용 -->
+			<dl>
+				<div>
+					<dt>
+						Coke Light - 0.3<span aria-label="liter">L</span>
+					</dt>
+					<dd>
+						&dollar;1.50
+					</dd>
+				</div>
+
+				<div>
+					<dt>
+						Heineken Beer - 0.5<span aria-label="liter">L</span>
+					</dt>
+					<dd>
+						&dollar;3.25
+					</dd>
+				</div>
+
+				<div>
+					<dt>
+						Chicken McNuggets
+					</dt>
+					<dd>
+						&dollar;21.00
+					</dd>
+				</div>
+			</dl>
+
+			<!-- 의미상으로 total 가격이 낱개항목 아래에 오는 게 맞다고 판단하면 아래로 내리기 
+					(실제 순서는 css에서 바꾸면 됨) -->
+			<dl>
+				<dt>In total</dt>
+				<dd>
+					<!-- 가격(금액)은 영수증에서 중요 -> strong으로 강조 -->
+					<strong>
+						&dollar;25.75
+					</strong>
+				</dd>
+			</dl>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -40,9 +40,11 @@ body::after {
 	/* 프로필내용 div와 이미지 div의 자리를 바꿈 (row로 배열하고 reverse로 순서롤 뒤집음 */
 	flex-direction: row-reverse;
 	justify-content: space-between;
+
+	/* 반응형을 미디어쿼리 안 쓰고 이렇게 간단하게 조절할 수도 있음 (960px 이하로는 안 줄어들게) */
 	width: 100%;
-	/* 반응형을 미디어쿼리 안 쓰고 이렇게 조절할 수도 있음 (960px 이하로는 안 줄어들게) */
 	max-width: 960px;
+	
 	padding: 40px 24px;
 	border-radius: 6px;
 	background-color: #fff;
@@ -63,9 +65,9 @@ body::after {
 /* 이미지 자체 */
 .user-profile-photo img {
 	width: 150px;
-	height: 150px; /* auto하면 본래 사진의 height 비율 그대로 나옴*/
+	height: 150px; /* auto하면 본래 사진의 height 비율 그대로 나옴 */
 	border-radius: 150px;
-	border: 1px solid #eaeaea; /* 이 처리는 왜 해주지? - 이미지 둘레를 좀 더 깔끔하게 만들어 주는듯 */
+	border: 1px solid #eaeaea; /* 이 처리는 왜 해주지?(이미지 둘레 좀 더 깔끔하게 만들어 주기 위함인듯) */
 }
 
 .user-profile-data {
@@ -80,7 +82,7 @@ body::after {
 	/* 글자두께를 의도적으로 얇게 */
 	font-weight: 300;
 	margin: -5px 0 20px;
-	/* 줄간격: margin 주고 나서 간격을 좀 더 상세하게 조절할 때 */
+	/* 줄간격: margin 주고 나서 간격을 좀 더 상세하게 조절 */
 	line-height: 32px;
 }
 
@@ -105,10 +107,10 @@ body::after {
 
 /* key 부분 */
 .user-profile-data dl dt {
-	/* 400이 기본값 -> 아마 value 부분과 비교하려고 넣은듯 */
+	/* 400이 기본값 (아마 value 부분과 비교하려고 넣은듯) */
 	font-weight: 400;
-	/* 소문자로 바꿔주기 */
-	text-transform: lowercase;
+	/* text-transform: none/capitalize(단어 맨앞만 대문자)/uppercase(전부 대문자)/lowercase(전부 소문자) */
+	text-transform: lowercase; /* 소문자로 바꿔주기 */
 	margin-left: 4px;
 }
 

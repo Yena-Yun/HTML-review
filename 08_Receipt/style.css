@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700&display=swap");
+
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: "Nunito Sans", sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #1f2d3d;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+	margin: 0 auto;
+	background-color: #1f2d3d;
+}
+
+body::after {
+	content: "kimbug©";
+	display: block;
+	margin-top: 50px;
+	color: #fff;
+	font-size: 12px;
+	font-weight: 600;
+}
+
+body>h1 {
+	margin-bottom: 32px;
+	font-size: 20px;
+	line-height: 28px; /* 줄간격: 간격 미세조정 시 */
+	color: #fff;
+}
+
+body>h1 span {
+	display: block;
+	font-size: 14px;
+	font-weight: 400; /* h1이어서 굵게 처리됐던 글자를 원래 두께로 바꿈 */
+	line-height: 20px; /* 역시나 간격 미세 조정 */
+	opacity: 0.5; /* 회색 계열의 경우 글자색 지정이 아닌 투명도로 조절 */
+}
+
+/* a 태그 넣으면 href 속성 때문에 기본적으로 파란글자에 밑줄이 생김
+	=> 반드시 글자색과 밑줄 따로 처리 필요 */
+body>h1 a {
+	color: #fff;
+	text-decoration: none;
+}
+
+body>h1,
+.receipt {
+	/* div로 사각형을 만드는 게 아니라 
+		width를 100%로 주고 대신 max-width를 원하는 사각형 너비로 지정하면 
+		사각형 모양도 만들어지고 살짝 반응형도 됨 */
+	width: 100%;
+	max-width: 320px;
+}
+
+.receipt {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	/* padding 지정해놓으면 화면 축소 시 특정 너비 이하로 줄어드는 것 막을 수 있음 */
+	/* 항상 위쪽 여백을 약간 더 많이 (위:아래 = 6:4 정도) */
+	padding: 48px 32px 32px;
+	border-radius: 12px;
+
+	/* 우측상단 맥도널드 로고 이미지 
+		(이미 McDonald's라는 텍스트가 있으므로
+		여기서의 맥도널드 로고는 꾸미는 용도 => css에서 작성) */
+	background-color: #fff; /* 이미지가 png 파일이므로 배경색 넣어줘야 함 */
+	background-image: url("./assets/logo-mcdonalds.png");
+	background-repeat: no-repeat;
+	background-size: 40px auto;
+	/* 여기 이미지는 order와 상관없이 위치 따로 지정 */
+	background-position: 91% 28px; /* width: 부모요소의 91% 되는 곳, height: top으로부터 28px */
+}
+
+/* 지불날짜 */
+.receipt>span {
+	order: 1;
+	display: block; /* inline 속성인 span에 div 속성 추가 => 너비 지정 가능해짐 */
+
+	/* 상위요소에 padding 먹여져 있으므로 그 안쪽까지 너비 꽉 채움 */
+	width: 100%;
+
+	/* margin의 방향은 되도록 한쪽으로만 */
+	margin-bottom: 20px;
+	
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 600;
+	color: #80868e;
+}
+
+.receipt h2 {
+	order: 2;
+	margin-bottom: 24px;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 24px;
+	color: #333e47;
+}
+
+.receipt .barcode {
+	order: 3;
+	width: 120px;
+	/* 이미지는 이미 높이가 있으므로 height 따로 지정 필요없음 */
+	margin-bottom: 32px;
+}
+
+.receipt img {
+	width: 100%; /* width 120px로 맞춰져 있는 부모요소(.barcode) 따라감 */
+	height: auto; /* 이미지 비율에 맞게 높이 자동맞춤 */
+}
+
+.receipt .bill-record {
+	order: 4;
+	display: flex;
+	flex-direction: column-reverse;
+	width: 100%;
+}
+
+.receipt dl {
+	width: 100%;
+}
+
+.receipt dl div, /* 구매한 항목 3개 */
+.receipt dl:last-child { /* In total 부분 */
+	display: flex; /* 가로 정렬한 후 */
+	justify-content: space-between; /* 끝과 끝으로 보냄 */
+	margin-bottom: 4px;
+	font-size: 14px;
+	color: 333e47;
+	opacity: 0.8; /* 글자색 -> 투명도로 */
+}
+
+/* In total 부분만 따로 margin 더 주기
+	(전체를 먼저 건드리고 부분은 나중에 수정 */
+.receipt dl:last-child {
+	margin-bottom: 16px;
+}
