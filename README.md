@@ -16,7 +16,7 @@
 <img src="https://i.esdrop.com/d/KwrGH1p1Zl/XbFEIqprDi.png" width="40%" height="45%">
 
 ## 3. Feature_Box
-<img src="https://i.esdrop.com/d/KwrGH1p1Zl/u5SmkT6FGK.png" width="40%" height="45%">
+<img src="https://i.esdrop.com/d/KwrGH1p1Zl/u5SmkT6FGK.png" width="30%" height="35%">
 
 ## 4. Logo_in_Header
 <img src="https://i.esdrop.com/d/KwrGH1p1Zl/ODa0P5K6Uv.png" width="40%" height="45%">
