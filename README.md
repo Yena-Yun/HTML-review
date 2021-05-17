@@ -10,7 +10,7 @@
 스크린샷
 
 ### 1. Ad_Banner
-<img src="https://i.esdrop.com/d/KwrGH1p1Zl/UTW1JwNsCo.png"  width="40%" height="45%">
+<img src="https://i.esdrop.com/d/KwrGH1p1Zl/UTW1JwNsCo.png"  width="30%" height="35%">
 
 ## 2. Google_Search_Result_Item
 <img src="https://i.esdrop.com/d/KwrGH1p1Zl/XbFEIqprDi.png" width="40%" height="45%">
