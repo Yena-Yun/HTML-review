@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Github Dropdown Menu</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="dropdown">
+		<!-- 겉보기에는 이미지이지만 누르면 어딘가로 이동하니까 버튼 같다는 의미로 버튼으로 처리해줌
+			=> but 스크린리더 입장에서는 갑자기 왜 버튼이 등장하는지 모르기 때문에 이 버튼이 무슨 역할을 하는지 알려주기 -->
+		<button type="button" aria-label="Open user menu" class="dropdown-button">
+			<img src="https://user-images.githubusercontent.com/19285811/69063907-43da4800-0a58-11ea-8efb-4b57dca4e3fe.png"
+				alt="rohjs">
+		</button>
+
+		<div class="dropdown-menu">
+			<h3>
+				<a href="#">Signed in as <strong>rohjs</strong></a>
+			</h3>
+			<ul>
+				<!-- ul의 직계자식으로는 li만 올 수 있으므로 li 안에 a 태그를 넣어준다 -->
+				<li>
+					<a href="#">
+						Your profile
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						Your repositories
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						Your projects
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						Your stars
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						Your gists
+					</a>
+				</li>
+			</ul>
+
+			<ul>
+				<li>
+					<a href="#">
+						Feature preview
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						Help
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						Settings
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						Sign out
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<script src="app.js"></script>
+</body>
+
+</html>

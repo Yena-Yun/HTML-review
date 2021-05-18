@@ -1,0 +1,185 @@
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+		"Helvetica Neue", sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #1f2d3d;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+	margin: 0 auto;
+	background-color: #1f2d3d;
+}
+
+body::after {
+	content: "kimbug©";
+	display: block;
+	margin-top: 50px;
+	color: #fff;
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.dropdown {
+	/* dropdown-button과 dropdown-menu를 감싸고 있는 부모요소에 
+		position을 relative로 설정 (자식요소들의 기준이 됨) */
+	position: relative;
+}
+
+/* 누르면 드롭다운 메뉴 나타나는 이미지 버튼 */
+.dropdown-button {
+	width: 40px;
+	padding: 0;
+	border: none;
+	border-radius: 5px;
+	/* 지정한 크기보다 사진이 크면 숨김 */
+	overflow: hidden;
+	/* 기존에 초기값으로 있던 버튼 색깔 없애기 */
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.dropdown-button:hover {
+	/* 이미지에 마우스 올리면 살짝 어둡게 */
+	opacity: 0.75;
+}
+
+/* :focus = '선택'된 요소 (한번 선택 후 계속해서 지속 */
+/* :active = '활성화'된 요소 (마우스로 누르고 있을 때만 지속) */
+.dropdown-button:focus,
+.dropdown-button:active {
+	box-shadow: none;
+	outline: none;
+}
+
+.dropdown-button img {
+	/* width는 100%로 맞추고 */
+	width: 100%;
+	/* height는 width를 고려하여 원래 이미지 비율에 맞게 설정 */
+	height: auto;
+}
+
+.dropdown-menu {
+	/* 처음에 화면 띄웠을 때는 안 보임 */
+	display: none;
+
+	/* 부모요소인 dropdown에 맞춰서 배치됨 */
+	position: absolute;
+
+	/* 이미지 아래쪽에 뜨도록 (기준이 뭔지는 아직 모르겠음) */
+	top: 100%;
+	/* 오른쪽 배치 */
+	right: 0;
+	
+	width: 200px;
+	padding: 8px 0;
+	border-radius: 4px;
+	background-color: #fff;
+	box-shadow: 0 1px 15px rgba(27, 31, 35, 0.15);
+
+	/* hover 시 부여된 transform 속성을 좀 더 부드럽게 실행 */
+	transition: transform 200ms ease-in; /* 0.2초 동안 ease-in(부드럽게) */
+}
+
+.dropdown-menu.active {
+	/* 누르고 나면 보이게 (active => js로 조절) */
+	display: block;
+}
+
+.dropdown-menu:hover {
+	/* 마우스 hover 시 y축 아래로 2px 이동 */
+	transform: translateY(2px);
+}
+
+/* 드롭다운 메뉴 위쪽에 말풍선 모양 만들어주는 조그만 사각형 */
+.dropdown-menu::before {
+	content: "";
+	position: absolute;
+	top: -18px;
+	right: 12px;
+
+	/* *** 말풍선 끄트머리의 뾰족 튀어나온 부분 만들기 
+		width와 height를 모두 0으로 주고
+		border를 매우 굵게 지정한 뒤 
+		각 모서리에 색을 주는지, 투명하게 처리하는지 여부
+		(아래 예처럼 transparent 주기 전 첫 모양이 가로로 살짝 긴 직사각형이면 
+		삼각형도 가로로 살짝 납작한 모양으로 만들 수 있음) */
+	width: 0;
+	height: 0;
+	border-top: 9px solid transparent;
+	border-left: 8px solid transparent;
+	border-bottom: 9px solid #fff;
+	border-right: 8px solid transparent;
+}
+
+.dropdown-menu h3,
+.dropdown-menu a {
+	font-size: 14px;
+	line-height: 1.5;
+	color: #24292e;
+	text-decoration: none;
+}
+
+.dropdown-menu h3 {
+	/* 부모요소의 dropdown menu에서 이미 padding 위쪽을 8px을 줬기 때문에 
+		여기서도 위쪽은 8px만 부여 (결과: 위 좌우 아래 모두 16px) */
+	padding: 8px 16px 16px;
+
+	/* 아주 연한 색으로 구분선 */
+	border-bottom: 1px solid #e1e4e8;
+	font-weight: 500;
+}
+
+.dropdown-menu h3 strong {
+	font-weight: 700;
+}
+
+/* 이름 부분에 hover하면 살짝 회색(=> 투명도로 조절) */
+.dropdown-menu h3 strong:hover {
+	opacity: 0.5;
+}
+
+.dropdown-menu ul {
+	/* list-style: none은 항상 ul에 주기 (=> 그러면 아래 li 태그들에게 먹힘) */
+	list-style-type: none;
+	/* 위아래로만 패딩 살짝 주기 */
+	padding: 8px 0;
+}
+
+/* last-child: Feature preview부터 Sign out까지 */
+/* 위쪽에 연한 색 구분선 */
+.dropdown-menu ul:last-child {
+	border-top: 1px solid #e1e4e8;
+}
+
+/* 드롭다운 메뉴의 각 항목 */
+.dropdown-menu ul a {
+	/* 역시나 숨어 있다가 보여지는 것이므로 block 처리 */
+	display: block;
+	/* 동일한 패딩 주기 */
+	padding: 8px 16px;
+	font-size: 14px;
+	/* 텍스트로 된 요소들 간격 맞출 때는 줄간격 애용하기 */
+	line-height: 1.5;
+
+	/* a 태그라서 퍼런 글자색 바꾸고 아래 밑줄도 없애주기 */
+	color: #24292e;
+	text-decoration: none;
+}
+
+/* 각 항목에 마우스 올리면 글자색 흰색에 파란 배경색 부여 */
+.dropdown-menu ul a:hover {
+	color: #fff;
+	background-color: #0366d6;
+}
