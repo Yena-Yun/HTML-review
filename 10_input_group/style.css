@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400,600&display=swap");
+
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: "Nunito Sans", sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #1f2d3d;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+	margin: 0 auto;
+	background-color: #f8f9fa;
+}
+
+body::after {
+	content: "kimbug©";
+	display: block;
+	margin-top: 50px;
+	color: #1f2d3d;
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.subscription {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	/* 항상 위아래보다 좌우를 더 많이 */
+	padding: 32px 56px;
+	
+	border-radius: 6px;
+	text-align: center;
+	background-color: #fff;
+	/* box-shadow: 오른쪽 | 아래 | 흐린 정도 | 퍼져나가는 정도 | 색 */
+	box-shadow: 0 3px 30px 0 rgba(0, 0, 0, 0.025);
+}
+
+.subscription h1 {
+	/* 마진은 한쪽으로만 (위쪽 요소: 아래쪽으로 마진 줌) */
+	margin-bottom: 8px;
+	font-size: 24px;
+	line-height: 1.6666666667; /* 10/6 => ? */
+	font-weight: 600;
+	color: #212529;
+}
+
+.subscription p {
+	/* h1 글자색보다 살짝 연하게 */
+	color: #333e47;
+}
+
+.input-group {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	/* 마진은 한쪽방향으로만 (아래쪽 요소: 위쪽으로 마진 줌) */
+	margin-top: 20px;
+}
+
+.input-group input {
+	/* 4의 배수..! */
+	width: 240px;
+	height: 36px;
+
+	/* 입력되는 텍스트가 조금 안쪽에서 시작할 수 있게 */
+	padding: 0 12px;
+
+	border: none;
+	border-radius: 4px;
+
+	/* 구독버튼과 살짝 떨어뜨리기 */
+	margin-right: 4px;
+
+	font-size: 14px;
+	font-family: "Nunito Sans", sans-serif;
+	background-color: #f6f8fa;
+	color: #333e47;
+}
+
+/* input창이나 button 눌렀을 때 생기는 테두리 없애기 */
+.input-group input:focus,
+.input-group button:focus {
+	box-shadow: none;
+	outline: none;
+}
+
+/* input창 내의 placeholder 색깔 지정 (속성이므로 '::' 붙여서 css에서 이렇게 지정한다) */
+.input-group input::placeholder {
+	color: #b6bec8;
+}
+
+.input-group button {
+	/* 버튼의 경우 글자에 버튼 크기가 딱 맞는 경우가 많음
+	=> 위아래 좌우 너비가 같다면 따로 width 지정할 필요없이 height만 주고 
+	padding과 글자 크기로 width 조절 가능 */
+	height: 36px;
+	padding: 0 12px;
+
+	border: none;
+	border-radius: 4px;
+
+	font-size: 14px;
+	font-family: "Nunito Sans", sans-serif;
+	font-weight: 600;
+	
+	color: #fff;
+	background-color: #ff4438;
+}
