@@ -43,7 +43,7 @@
 <img src="https://i.esdrop.com/d/KwrGH1p1Zl/376CnneWWw.png" width="30%" height="auto">
 
 ## 12. Gmail Inbox
-<img src="https://i.esdrop.com/d/KwrGH1p1Zl/B1nkfrDuPM.png" width="40%" height="auto">
+<img src="https://i.esdrop.com/d/KwrGH1p1Zl/B1nkfrDuPM.png" width="60%" height="auto">
 
 ## 13. Music Player
 <img src="https://i.esdrop.com/d/KwrGH1p1Zl/pduyLDnOun.png" width="40%" height="auto">
