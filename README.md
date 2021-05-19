@@ -33,3 +33,20 @@
 ## 8. Receipt
 <img src="https://i.esdrop.com/d/KwrGH1p1Zl/CuJWbJTU6D.png" width="30%" height="auto">
 
+## 9. Github Dropdown Menu
+<img src="https://i.esdrop.com/d/KwrGH1p1Zl/6NX5dctxIA.png" width="30%" height="auto">
+
+## 10. Input Group
+<img src="https://i.esdrop.com/d/KwrGH1p1Zl/glxoB1oEj7.png" width="30%" height="auto">
+
+## 11. Feed
+<img src="https://i.esdrop.com/d/KwrGH1p1Zl/376CnneWWw.png" width="30%" height="auto">
+
+## 12. Gmail Inbox
+<img src="https://i.esdrop.com/d/KwrGH1p1Zl/B1nkfrDuPM.png" width="40%" height="auto">
+
+## 13. Music Player
+<img src="https://i.esdrop.com/d/KwrGH1p1Zl/pduyLDnOun.png" width="40%" height="auto">
+
+## 14. Video Player
+<img src="https://i.esdrop.com/d/KwrGH1p1Zl/SjRTTUJHyX.png" width="40%" height="auto">
