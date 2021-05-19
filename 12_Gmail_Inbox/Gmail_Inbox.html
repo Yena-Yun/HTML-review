@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Gmail Inbox</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<table class="inbox">
+		<thead>
+			<!-- 스크린리더만 읽을 수 있고 화면에는 안 나타나도록 (=> css로 처리) -->
+			<tr class="sr-only">
+				<!-- scope="col": 스크린리더가 표를 읽을 때 방향 -->
+				<th scope="col">
+					Actions
+				</th>
+				<th scope="col">
+					Sender
+				</th>
+				<th scope="col">
+					Title
+				</th>
+				<th scope="col">
+					Timestamp
+				</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<!-- 아직 안 읽은 메일 (=> css로 텍스트 진하게 처리) -->
+			<tr class="unread">
+
+				<!-- Actions -->
+				<!-- td에는 클래스 주지 않음 -->
+				<td>
+					<!-- div를 하나 더 만들어서 클래스 부여 -->
+					<div class="inbox-actions">
+
+						<div class="inbox-checkbox">
+							<input type="checkbox" id="inbox-1">
+							<!-- label의 for = input의 id -->
+							<!-- 화면에는 checkbox 이미지만 보이지만, 이미지를 볼 수 없는 사람들을 위한 스크린리더가 
+								텍스트만 읽어준다는 것을 고려할 때 해당 이미지에 대한 설명 필요 -->
+							<label for="inbox-1" class="sr-only">Select this email</label>
+						</div>
+
+						<button type="button" class="inbox-star">
+							<span class="sr-only">Add to favorites</span>
+						</button>
+					</div>
+				</td>
+
+				<!-- Sender -->
+				<td>
+					Goorm Edu
+				</td>
+
+				<!-- Title -->
+				<td>
+					<a href="#">
+						<!-- 읽지 않은 메일이라는 걸 알려주고 나서 메일 제목 읽도록 -->
+						<strong class="sr-only">
+							Unread:
+						</strong>
+						<strong>
+							Rate your course: FRONTEND 101 WITH KIMBUG
+						</strong>
+						<span>
+							- Woohyeon. How’s everything going? We want to hear your opnion on...
+						</span>
+					</a>
+				</td>
+
+				<!-- Timestamp -->
+				<td>
+					3:34 PM
+				</td>
+			</tr>
+
+			<!-- 읽은 메일 -->
+			<tr class="read">
+				<!-- Actions -->
+				<td>
+					<div class="inbox-actions">
+
+						<!-- div 안에 스크린리더 텍스트 -->
+						<div class="inbox-checkbox">
+							<input type="checkbox" id="inbox-1">
+							<label for="inbox-1" class="sr-only">Select this email</label>
+						</div>
+
+						<!-- button(div) 안에 스크린리더 텍스트 -->
+						<button type="button" class="inbox-star">
+							<span class="sr-only">Add to favorites</span>
+						</button>
+					</div>
+				</td>
+
+				<!-- Sender -->
+				<td>
+					Goorm Edu
+				</td>
+
+				<!-- Title -->
+				<td>
+					<a href="#">
+						<!-- 읽은 메일이라는 점을 강조 -->
+						<strong class="sr-only">
+							Read:
+						</strong>
+						<strong>
+							Rate your course: FRONTEND 101 WITH KIMBUG
+						</strong>
+						<span>
+							- Woohyeon. How’s everything going? We want to hear your opnion on...
+						</span>
+					</a>
+				</td>
+
+				<!-- Timestamp -->
+				<td>
+					3:34 PM
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<script src="app.js"></script>
+</body>
+
+</html>

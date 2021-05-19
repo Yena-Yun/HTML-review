@@ -5,10 +5,73 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Feed</title>
+	<link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
+	<div class="feed">
+		<div class="feed-user-profile">
+			<!-- 이미지를 누르면 어딘가로 이동할 것 같다 => a 태그 -->
+			<a href="#">
+				<img src="https://user-images.githubusercontent.com/19285811/69063907-43da4800-0a58-11ea-8efb-4b57dca4e3fe.png"
+					alt="Kimbug">
+			</a>
 
+			<!-- 순전히 css를 위한 div (이걸 넣어줘야 이 두 요소만 column으로 배치됨) -->
+			<div>
+				<!-- Kimbug 이름을 누르면 어딘가로 이동할 것 같다 = a 태그 -->
+				<!-- 주의: img는 a태그 안에 넣지만, h1은 h1 안에 a 태그를 넣음 (의미상의 중요도) -->
+				<h1>
+					<a href="#">
+						Kimbug
+					</a>
+				</h1>
+
+				<!-- 일반인들은 min을 minute이라고 바로 이해할 수 있지만 스크린리더는 설명이 필요 -->
+				<span aria-label="posted 30 minutes ago">
+					30 min
+				</span>
+			</div>
+
+			<!-- 누르면 팔로우가 되거나 팔로우가 취소가 되는 등 인터랙션이 있음
+					=> 유저가 눌렀을 때 어떤 interaction이 있다면 button 태그를 사용해야 함 -->
+			<!-- 근데 인터랙션은 있지만 'form'을 제출하는 것은 아니므로 type은 그냥 button -->
+			<!-- (+ 클릭 시 JS를 통해 following 클래스가 부여됨) -->
+			<button type="button">
+				Follow
+			</button>
+		</div>
+
+		<div class="feed-content">
+			<p>
+				The most beautiful experience we can have is the mysterious.
+				It is the fundamental emotion
+				that stands at the cradle of true art and true science.
+				— Albert Einstein
+			</p>
+		</div>
+
+		<div class="feed-footer">
+			<!-- 여기도 마찬가지로 좋아요 수가 올라가거나 댓글창이 뜨는 등의 인터랙션은 있지만
+				form이 제출되는 것은 아니므로 button은 쓰되 type은 그냥 button -->
+			<button type="button">
+				10 Likes
+			</button>
+			<button type="button">
+				0 Comments
+			</button>
+		</div>
+
+		<!-- textarea의 내용은 submit 버튼을 통해 서버에 제출됨 => form 사용 -->
+		<!-- 	+ 제출할 내용이 길 경우 GET 대신 POST 사용 (더 긴 내용을 보낼 수 있음) -->
+		<form action="#" method="POST" class="feed-comment">
+			<!-- textarea에도 placeholder 지정 가능 -->
+			<textarea placeholder="Write a comment"></textarea>
+			<button type="submit">Submit</button>
+		</form>
+	</div>
+
+	<script src="./app.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,201 @@
+* {
+	/* 화면 꽉 채우기..? */
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+		"Helvetica Neue", sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #1f2d3d;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+	margin: 0 auto;
+	background-color: #ee5253;
+}
+
+body::after {
+	content: "kimbug©";
+	display: block;
+	margin-top: 50px;
+	color: #fff;
+	font-size: 12px;
+	font-weight: 600;
+}
+
+/* 화면에는 안 보이고 스크린리더만 읽어주는 부분 */
+.sr-only {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+	z-index: -1;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	visibility: hidden;
+}
+
+/* 인박스 전체 */
+.inbox {
+	/* max-width: 이거 이상으로 더 늘어나지는 않는다 */
+	max-width: 1140px;
+
+	/* border-collapse: collapse, separate 
+		collapse 하면 테두리들이 여백없이 쫙 붙고(표 간격 줄임), 
+		separate 하면 각 테두리 박스 별로 모두 분리됨(표 안의 간격 늘어나는 효과) */
+	border-collapse: collapse;
+
+	border-radius: 4px;
+	background-color: #fff;
+	font-size: 13.5px;
+	color: #212529;
+
+	/* 박스 크기가 줄어들어도 안에 있는 텍스트가 아랫줄로 안 내려가게 함 */
+	white-space: nowrap;
+}
+
+/* Actions, Sender 등 스크린리더만 읽어주는 부분 */
+.inbox thead {
+	position: absolute;
+	z-index: -1;
+}
+
+.inbox tr {
+	transition: box-shadow 150ms ease-in-out;
+}
+
+.inbox tr:not(:last-child) {
+	box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+.inbox tr:hover {
+	box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.14);
+}
+
+/* 안 읽은 메일의 텍스트는 진하게 */
+.inbox tr.unread {
+	font-weight: 700;
+}
+
+/* !important: 전체에 적용된 어떤 요소도 상관없이 이 요소를 가장 우선 적용 */
+.inbox tr.unread span {
+	font-weight: 400 !important;
+}
+
+.inbox span:not(:nth-child(2)) {
+	opacity: 0.75;
+}
+
+.inbox th,
+.inbox td {
+	padding: 8px 16px;
+}
+
+/* Title 부분 */
+.inbox th:nth-child(3),
+.inbox td:nth-child(3) {
+	padding-right: 64px;
+}
+
+/* Timestampe 부분 */
+.inbox th:last-child,
+.inbox td:last-child {
+	font-size: 12px;
+}
+
+/* 링크부분 - 글자색, 밑줄 처리 */
+.inbox a {
+	color: inherit;
+	text-decoration: none;
+}
+
+/* 체크박스, star 부분 */
+.inbox-actions {
+	display: flex;
+	align-items: center;
+}
+
+.inbox-actions>* {
+	width: 24px;
+	height: 24px;
+	padding: 0;
+	margin: 0 2px;
+}
+
+/* 둘 다 div와 button - 인라인요소 적용 */
+.inbox-star,
+.inbox-checkbox::after {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	border: none;
+
+	background-color: transparent;
+	background-position: center center;
+	/* contain, no-repeat : 꽉 채우지 않고, 반복 없음 */
+	background-size: contain;
+	background-repeat: no-repeat;
+	
+	cursor: pointer;
+	transition: opacity 100ms;
+}
+
+.inbox-star:hover,
+.inbox-checkbox:hover::after {
+	/* 마우스 올리면 색 살짝 더 밝아지게 (투명도로 색 조절) */
+	opacity: 0.75;
+}
+
+.inbox-star:focus,
+.inbox-checkbox:focus {
+	outline: none;
+	box-shadow: none;
+}
+
+/* star 버튼에 이미지 (안 눌렀을 때) */
+.inbox-star {
+	background-image: url(./assets/icon-star-border.svg);
+}
+
+/* star 눌렀을 때 이미지 */
+.inbox-star.active {
+	background-image: url(./assets/icon-star.svg);
+}
+
+/* 체크박스 이미지 (안 눌렀을 때) */
+.inbox-checkbox::after {
+	content: "";
+	background-size: 90% auto;
+	background-image: url(./assets/icon-checkbox-outlined.svg);
+}
+
+/* 체크박스 눌렀을 때 이미지 */
+.inbox-checkbox.active::after {
+	background-image: url(./assets/icon-checkbox-checked.svg);
+}
+
+/* 체크박스 부모요소에 relative 주고 */
+.inbox-checkbox {
+	position: relative;
+	top: 1px;
+	overflow: hidden;
+}
+
+/* 안에 들어간 체크박스 input은 absolute(= 부모요소 기준으로 배치) */
+.inbox-checkbox input {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+}
