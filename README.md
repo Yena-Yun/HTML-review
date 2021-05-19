@@ -4,12 +4,13 @@
 
 사용기술: HTML, CSS
 
-공부기간: 210515 - 
-
+공부기간
+HTML 파트: 210515 - 210519 
+CSS 파트: 
 
 스크린샷
 
-### 1. Ad_Banner
+## 1. Ad_Banner
 <img src="https://i.esdrop.com/d/KwrGH1p1Zl/UTW1JwNsCo.png"  width="30%" height="auto">
 
 ## 2. Google_Search_Result_Item
