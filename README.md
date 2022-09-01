@@ -1,11 +1,8 @@
 # kimbug-HTML/CSS
 
-강의: '김버그의 HTML&CSS는 재밌다' (구름에듀)
+### '김버그의 HTML&CSS는 재밌다'
 
-공부기간: 210515 - 210519
-
-
-스크린샷
+#### 공부 기간: 210515 - 210519 (총 5일)
 
 ## 1. Ad_Banner
 <img src="https://i.esdrop.com/d/KwrGH1p1Zl/UTW1JwNsCo.png"  width="30%" height="auto">
